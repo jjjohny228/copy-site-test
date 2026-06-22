@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B&A Dental — Стоматологічна клініка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <img src="images/black-logo.svg" alt="B&A Dental Clinic" class="nav__logo-img" width="64" height="74" style="filter:invert(1) brightness(0.85)" />
+      <span class="nav__brand">B&amp;A Dental</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#team">Команда</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+    <a href="#book" class="nav__cta">Записатись</a>
+    <button class="nav__burger" aria-label="Меню" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="#about" onclick="closeNav()">Про нас</a></li>
+      <li><a href="#services" onclick="closeNav()">Послуги</a></li>
+      <li><a href="#team" onclick="closeNav()">Команда</a></li>
+      <li><a href="#contact" onclick="closeNav()">Контакти</a></li>
+      <li><a href="#book" class="drawer__cta" onclick="closeNav()">Записатись на прийом</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <img
+        src="images/hero.jpg"
+        onerror="this.onerror=null;this.src='images/patient.jpg'"
+        alt="Посмішка пацієнта B&A Dental"
+        class="hero__img"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <!-- Logo mark overlay -->
+    <div class="hero__logomark" aria-hidden="true">
+      <img src="images/logo.svg" alt="" width="140" height="160" style="border-radius:4px;" />
+    </div>
+
+    <!-- Scattered editorial text (right side) -->
+    <div class="hero__text" aria-label="Dental studio that wants you to be happy">
+      <span class="hero__word hero__word--1">Dental</span>
+      <span class="hero__word hero__word--2">that</span>
+      <span class="hero__word hero__word--3">wants</span>
+      <span class="hero__word hero__word--4">you</span>
+      <span class="hero__word hero__word--5">to be</span>
+      <span class="hero__word hero__word--6">happy</span>
+      <span class="hero__word hero__word--7">studio</span>
+    </div>
+
+    <!-- Mobile-only tagline -->
+    <div class="hero__mobile-tag">
+      <p>Dental studio</p>
+      <p>that wants you to be <em>happy</em></p>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT / STATS -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__head">
+        <p class="label">Про нас</p>
+        <h2 class="about__title">
+          Ми створюємо<br />
+          <em>здорові посмішки</em><br />
+          понад 20 років
+        </h2>
+      </div>
+      <div class="about__body">
+        <p class="about__desc">
+          B&amp;A Dental — сучасна стоматологічна клініка у серці міста. Наші
+          висококваліфіковані стоматологи мають багаторічний досвід і
+          спеціалізуються на сучасних методах лікування зубів. Ми використовуємо
+          лише сертифіковані матеріали від провідних американських та
+          європейських виробників.
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">10<sup>+</sup></span>
+            <span class="stat__label">кращих лікарів</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">20</span>
+            <span class="stat__label">років досвіду</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">5000<sup>+</sup></span>
+            <span class="stat__label">щасливих посмішок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <p class="label">Послуги</p>
+        <h2>Що ми пропонуємо</h2>
+      </div>
+
+      <div class="services__grid">
+
+        <article class="service-card service-card--accent">
+          <div class="service-card__num">01</div>
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9" stroke-width="3" stroke-linecap="round"/>
+              <line x1="15" y1="9" x2="15.01" y2="9" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Вініри</h3>
+          <p class="service-card__desc">
+            Естетичні керамічні вініри для досконалої посмішки. Тонкі
+            порцелянові пластини, що натурально виглядають і служать
+            десятиліттями.
+          </p>
+          <a href="#book" class="service-card__link" aria-label="Записатись на консультацію по вінірах">
+            Дізнатись більше
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__num">02</div>
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Імплантати</h3>
+          <p class="service-card__desc">
+            Сучасне відновлення зубів за допомогою титанових імплантатів.
+            Довговічне рішення, що виглядає та функціонує як природній зуб.
+          </p>
+          <a href="#book" class="service-card__link" aria-label="Записатись на консультацію по імплантатах">
+            Дізнатись більше
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__num">03</div>
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Безпека лікування</h3>
+          <p class="service-card__desc">
+            Багатоступенева стерилізація з автоклавом Melag класу B. Стерильні
+            інструменти для кожного пацієнта — ваша безпека є нашим
+            пріоритетом.
+          </p>
+          <a href="#book" class="service-card__link" aria-label="Дізнатись про стерилізацію">
+            Дізнатись більше
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__num">04</div>
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <path d="M9 9h.01M15 9h.01"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Ортодонтія</h3>
+          <p class="service-card__desc">
+            Вирівнювання зубів за допомогою брекетів та прозорих елайнерів.
+            Красива посмішка — це інвестиція у ваш успіх та впевненість.
+          </p>
+          <a href="#book" class="service-card__link" aria-label="Записатись на ортодонтію">
+            Дізнатись більше
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__num">05</div>
+          <div class="service-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93A10 10 0 1 0 4.93 19.07"/>
+              <path d="M15.54 8.46A5 5 0 1 0 8.46 15.54"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Відбілювання</h3>
+          <p class="service-card__desc">
+            Професійне відбілювання зубів у клініці за 1 сеанс. Ефект до
+            8–10 тонів світліше. Безпечно для емалі, без болю.
+          </p>
+          <a href="#book" class="service-card__link" aria-label="Записатись на відбілювання">
+            Дізнатись більше
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card service-card--cta">
+          <p class="service-card__cta-label">Не знаєте з чого почати?</p>
+          <h3>Безкоштовна<br/>консультація</h3>
+          <p>Запишіться на первинний огляд — лікар складе індивідуальний план лікування.</p>
+          <a href="#book" class="btn btn--dark">Записатись зараз</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="section-head">
+        <p class="label">Команда</p>
+        <h2>Наші лікарі</h2>
+      </div>
+      <div class="team__grid">
+
+        <article class="team-card">
+          <div class="team-card__img-wrap">
+            <img src="images/doctor.jpg" alt="Ashley Jones" loading="lazy" width="400" height="500" />
+          </div>
+          <div class="team-card__info">
+            <h3>Ashley Jones</h3>
+            <p class="team-card__role">Хірург-стоматолог</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__img-wrap team-card__img-wrap--offset">
+            <img src="images/doctor.jpg" alt="Don Francis" loading="lazy" width="400" height="500" />
+          </div>
+          <div class="team-card__info">
+            <h3>Don Francis</h3>
+            <p class="team-card__role">Ортодонт</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__img-wrap">
+            <img src="images/doctor.jpg" alt="Alexa Young" loading="lazy" width="400" height="500" />
+          </div>
+          <div class="team-card__info">
+            <h3>Alexa Young</h3>
+            <p class="team-card__role">Терапевт-стоматолог</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__img-wrap team-card__img-wrap--offset">
+            <img src="images/doctor.jpg" alt="Robert Rose" loading="lazy" width="400" height="500" />
+          </div>
+          <div class="team-card__info">
+            <h3>Robert Rose</h3>
+            <p class="team-card__role">Імплантолог</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINIC GALLERY -->
+  <section class="gallery" aria-label="Галерея клініки">
+    <div class="gallery__grid">
+      <div class="gallery__item gallery__item--1">
+        <img src="images/clinic-office.jpg" alt="Ресепшн B&A Dental" loading="lazy" width="800" height="600" />
+      </div>
+      <div class="gallery__item gallery__item--2">
+        <img src="images/clinic-chairs.jpg" onerror="this.src='images/clinic2.jpg'" alt="Стоматологічне крісло" loading="lazy" width="600" height="800" />
+      </div>
+      <div class="gallery__item gallery__item--3">
+        <img src="images/clinic2.jpg" onerror="this.src='images/patient.jpg'" alt="Обладнання клініки" loading="lazy" width="600" height="400" />
+      </div>
+      <div class="gallery__item gallery__item--4">
+        <div class="gallery__text-block">
+          <p class="label">Наш підхід</p>
+          <h3>Сучасне обладнання<br/>та безпечні матеріали</h3>
+          <p>Ми використовуємо цифрову діагностику та матеріали від провідних виробників США та Європи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <p class="label">Відгуки</p>
+        <h2>Що кажуть пацієнти</h2>
+      </div>
+      <div class="reviews__slider-wrap">
+        <button class="reviews__btn reviews__btn--prev" aria-label="Попередній відгук">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="reviews__slider" id="reviewsSlider">
+      <div class="reviews__grid">
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 зірок">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="review-card__text">
+            «Чудова клініка! Робили вініри — результат перевершив усі очікування. Лікарі дуже уважні, пояснюють кожен крок. Атмосфера комфортна, без стресу. Рекомендую всім, хто шукає якісну стоматологію.»
+          </blockquote>
+          <div class="review-card__author">
+            <div>
+              <strong>Ольга К.</strong>
+              <span>Вініри · Жовтень 2024</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 зірок">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="review-card__text">
+            «Встановили імплант — все пройшло бездоганно. Жодного болю під час процедури, лікар детально розповів про догляд після. Пройшов вже 6 місяців, результат відмінний. Клініка чиста, сучасне обладнання.»
+          </blockquote>
+          <div class="review-card__author">
+            <div>
+              <strong>Дмитро М.</strong>
+              <span>Імплантати · Серпень 2024</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 зірок">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote class="review-card__text">
+            «Звернулась на відбілювання — задоволена на 100%! Зуби стали значно світліші вже після першого сеансу. Персонал привітний, все пояснили перед процедурою. Обов'язково повернусь на профілактику.»
+          </blockquote>
+          <div class="review-card__author">
+            <div>
+              <strong>Наталія В.</strong>
+              <span>Відбілювання · Листопад 2024</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- reviews__grid -->
+        </div><!-- reviews__slider -->
+        <button class="reviews__btn reviews__btn--next" aria-label="Наступний відгук">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div><!-- reviews__slider-wrap -->
+      <div class="reviews__dots" id="reviewsDots">
+        <button class="reviews__dot reviews__dot--active" aria-label="Відгук 1"></button>
+        <button class="reviews__dot" aria-label="Відгук 2"></button>
+        <button class="reviews__dot" aria-label="Відгук 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO GET HERE / MAP -->
+  <section class="map-section" id="how-to-get">
+    <div class="map-section__inner">
+      <div class="map-section__info">
+        <p class="label">Як дістатись</p>
+        <h2>Ми знаходимось<br/>у центрі міста</h2>
+        <div class="map-section__details">
+          <div class="map-detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Адреса</strong>
+              <span>вул. Робоча 168, Дніпро, Україна</span>
+            </div>
+          </div>
+          <div class="map-detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <strong>Графік роботи</strong>
+              <span>Пн–Пт: 9:00–19:00<br/>Сб: 9:00–14:00<br/>Нд: вихідний</span>
+            </div>
+          </div>
+          <div class="map-detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 12 19.79 19.79 0 0 1 1.6 3.55 2 2 0 0 1 3.57 1.37h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.73 2.04z"/></svg>
+            <div>
+              <strong>Телефон</strong>
+              <span><a href="tel:+380682440094">+380 (68) 244-00-94</a></span>
+            </div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/66PKgbzEeDzGHhjAA" target="_blank" rel="noopener noreferrer" class="btn btn--dark map-section__btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Прокласти маршрут
+        </a>
+      </div>
+      <div class="map-section__map">
+        <iframe
+          src="https://maps.google.com/maps?q=48.4435757,34.9980012&z=16&output=embed&hl=uk"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="B&A Dental Clinic на карті"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="book" id="book">
+    <div class="book__inner">
+      <div class="book__content">
+        <p class="label label--light">Запис онлайн</p>
+        <h2 class="book__title">Запишіться на<br/><em>безкоштовну</em><br/>консультацію</h2>
+        <p class="book__desc">
+          Первинний огляд — безкоштовно. Лікар складе план лікування
+          та відповість на всі запитання.
+        </p>
+        <div class="book__contacts">
+          <a href="tel:+380682440094" class="book__phone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 12 19.79 19.79 0 0 1 1.6 3.55 2 2 0 0 1 3.57 1.37h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.73 2.04z"/></svg>
+            +380 (68) 244-00-94
+          </a>
+        </div>
+      </div>
+      <form class="book__form" novalidate>
+        <div class="form-group">
+          <label for="name">Ваше ім'я</label>
+          <input type="text" id="name" name="name" placeholder="Іван Петренко" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" placeholder="+380 (XX) XXX-XX-XX" required autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="service">Послуга</label>
+          <select id="service" name="service">
+            <option value="">Оберіть послугу</option>
+            <option>Вініри</option>
+            <option>Імплантати</option>
+            <option>Відбілювання</option>
+            <option>Ортодонтія</option>
+            <option>Консультація</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Коментар</label>
+          <textarea id="message" name="message" rows="3" placeholder="Опишіть вашу ситуацію..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--submit">
+          <span>Записатись на прийом</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="form__note">Ми зв'яжемося з вами протягом 15 хвилин</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/black-logo.svg" alt="B&A Dental" width="56" height="64" style="filter:invert(1) brightness(0.85)" />
+          <span>B&amp;A Dental</span>
+        </div>
+        <p>Стоматологічна клініка з 20-річним досвідом. Здорові зуби — щасливе життя.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#services">Послуги</a></li>
+          <li><a href="#team">Команда</a></li>
+          <li><a href="#book">Запис онлайн</a></li>
+        </ul>
+      </div>
+
+<div class="footer__col">
+        <h4>Контакти</h4>
+        <ul class="footer__contacts">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 12 19.79 19.79 0 0 1 1.6 3.55 2 2 0 0 1 3.57 1.37h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.73 2.04z"/></svg>
+            <a href="tel:+380682440094">+380 (68) 244-00-94</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>вул. Робоча 168, Україна</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Пн–Пт: 9:00–19:00<br/>Сб: 9:00–14:00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 B&amp;A Dental. Всі права захищені.</p>
+      <a href="https://www.instagram.com/bna_dent" target="_blank" rel="noopener noreferrer" class="footer__insta" aria-label="Instagram B&A Dental">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2.5" stroke-linecap="round"/></svg>
+        @bna_dent
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile nav
+    function toggleNav(btn) {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      document.getElementById('navDrawer').classList.toggle('nav-drawer--open', !open);
+      document.body.classList.toggle('no-scroll', !open);
+    }
+    function closeNav() {
+      document.querySelector('.nav__burger').setAttribute('aria-expanded', 'false');
+      document.getElementById('navDrawer').classList.remove('nav-drawer--open');
+      document.body.classList.remove('no-scroll');
+    }
+
+    // Form submit
+    document.querySelector('.book__form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('[type="submit"]');
+      btn.innerHTML = '<span>Дякуємо! Ми зв\'яжемося з вами</span>';
+      btn.disabled = true;
+    });
+
+    // Reviews slider
+    const slider = document.getElementById('reviewsSlider');
+    const dots = document.querySelectorAll('.reviews__dot');
+    const cards = slider ? slider.querySelectorAll('.review-card') : [];
+    let current = 0;
+
+    function goTo(idx) {
+      if (!slider || !cards.length) return;
+      current = Math.max(0, Math.min(idx, cards.length - 1));
+      cards[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      dots.forEach((d, i) => d.classList.toggle('reviews__dot--active', i === current));
+    }
+
+    document.querySelector('.reviews__btn--prev')?.addEventListener('click', () => goTo(current - 1));
+    document.querySelector('.reviews__btn--next')?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+    // Update dot on scroll
+    if (slider) {
+      slider.addEventListener('scroll', () => {
+        const cardW = cards[0]?.offsetWidth || 1;
+        const idx = Math.round(slider.scrollLeft / cardW);
+        dots.forEach((d, i) => d.classList.toggle('reviews__dot--active', i === idx));
+        current = idx;
+      }, { passive: true });
+    }
+
+    // Intersection observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.service-card, .team-card, .stat, .about__img-wrap').forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
